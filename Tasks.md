@@ -11,7 +11,7 @@
 
 # Tasks
 
-1.
+## 1.
 *	Our primary goal is to develop a structured dataset and use it to build a recommendation model for generating revenue. Therefore, we need to retain as much information as possible from individual searches to power our further analysis.
 *	After each individual customer session, we need to capture:
   * **User information**: User information from our registered user database or information that can be used to identify unregistered users.
@@ -22,7 +22,7 @@
     * The **conversion rate** of searches can be easily calculated with this formula: (Number of type 1 + type 2 conversions)/ (total number of searches)
     * The **rate of miles payment** can be calculated with: (Number of type 2 conversions) / (Number of type 1 + type 2 conversions)
 
-2.
+## 2.
  *	Utilize Azure Event Hubs to ingest JSON files with minimum latency and store them into Azure Blob/ADLS. After that, we ingest the JSON data using Azure Data Bricks for refinement and aggregation until we have data that is easily query-able (silver tables). We can then persist the silver table into our data lake / delta lake for direct analysis or generating gold tables for specialized usage scenarios. 
  *	With the silver and gold tables we have, machine learning models can be built to provide appropriate recommendations to customers. 
  	*	Since potential customers include both registered and unregistered guests, we don’t always have enough data for user profiling. Thus, a recommendation system using Item-Item Collaborative Filtering is preferred since we will only rely on the similarities between flights and trips.
@@ -31,7 +31,7 @@
 **How does the cost in miles affect the guests’ willingness to purchase?**  
 We can use Power BI or Tableau to build various charts/graphs/dashboards to illustrate the difference between the rate of regular payment and the rate of miles payment. Based on that, we can examine whether the cost in miles affect the guests’ willingness to purchase.
 
-3.
+## 3.
 **Option 1: List 6 or 8 most popular flight at that time on the Flight Search interface with lowest price.**
 * Pros: If the customer happens to choose this listed popular flight, this approach would compress the hesitation time before purchasing.
 * Cons: If the customer is from a small airport with limited options, this approach would not help to generate revenue.
@@ -40,7 +40,7 @@ We can use Power BI or Tableau to build various charts/graphs/dashboards to illu
 * Pros: Customers would feel convenient while using our Flight Search interface, and stick into our company. Besides, this approach will reduce the thinking time.
 * Cons: It will be challenging to generate reliable recommendations for customers who are not logged in, not registered or newly registered. The recommendations might confuse customers.
 
-4. 
+## 4. 
 * We will use JSON as the source format to capture the search information. There are two general directions we can go:
   * Include all/most of the information we need in the JSON documents. For example, for each flight/route, we store not only the UUID but also additional information about the flight/route.
   * Include only essential information we need in the JSON documents. For example, for each flight/route, we only store the UUID and retrieve other related information only when we need it for analysis.
