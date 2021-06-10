@@ -7,7 +7,7 @@
 
 1. Potential customers include both registered and unregistered Guests.  
 2. There exists an Aviation Database which contains all the information of scheduled flights, airplanes, airports, etc.  
-3. There exists a User Database which contains all the information of registered users.  
+3. There exists an User Database which contains all the information of registered users.  
 
 # Tasks
 
