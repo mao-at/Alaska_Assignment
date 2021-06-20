@@ -13,7 +13,7 @@
 
 ## 1.
 *	Our primary goal is to develop a structured dataset and use it to build a recommendation model for generating revenue. Therefore, we need to retain as much information as possible from individual searches to power our further analysis.
-*	After each individual customer session, we need to capture:
+*	After each individual customer search, we need to capture:
   * **User information**: User information from our registered user database or information that can be used to identify unregistered users.
   * **Search conditions**: Flight Type (Round-trip, One-way, Multi-city), Departing and Destination Airports, Departing Date, Cost-in-Miles (Boolean), etc.
   * **List of Flight information from the Aviation Database**: Departure/Arrival Time, WIFI (Boolean), Flight Duration, Plane Model, Charging Outlet Availability, etc. We will use NULL to indicate empty search result.
