@@ -1,3 +1,3 @@
 # Alaska_Assignment
 
-The details are in the **Task.md** document.
+The details are in the **Tasks.md** document.
